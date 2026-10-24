@@ -1,3 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahanyu Nature Guide - Tour Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(rgba(16, 37, 27, 0.85), rgba(11, 27, 19, 0.90)), 
+                        url('https://lh3.googleusercontent.com/gpu-csl/AM3A8OY3De4ADvB26a1yXdRz55RGNgWIAIrc0QBqlA69x24PVvwhoHwgb2JeGEsI2TyX6V1btvilVLMjOkJPa2HicX_JA7kgcaDEYdh89HcahuxVofNBgAbikqCBqF9YmZ3Q_IvDl20jYORxleHY') no-repeat center center fixed;
+            background-size: cover;
+            color: #f5f2e9;
+            margin: 0;
+            padding: 0;
+        }
+        .services-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .services-section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            margin-bottom: 30px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: rgba(11, 27, 19, 0.92);
+            border: 1px solid rgba(245, 242, 233, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .service-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .service-content h3 {
+            font-size: 1.2rem;
+            color: #f5f2e9;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #efb044;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 0.95rem;
+            color: #b9c0b5;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .book-btn {
+            flex: 1;
+            display: block;
+            text-align: center;
+            padding: 10px 6px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: #ffffff;
+        }
+        .email-btn {
+            background-color: #efb044;
+            color: #10251b;
+        }
+        .book-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
 <section id="services" class="services-section">
   <h2>Our Tour Services in Lushoto & Usambara</h2>
   <div class="services-grid">
@@ -9,18 +111,24 @@
         <h3>Usambara Local Coffee and Cultural Village Tour</h3>
         <p class="price">$35 USD per person</p>
         <p class="description">Authentic local coffee experience from Bean to cup, cultural interaction, and village walks in Lushoto. Includes park fee, testing coffee, guide, meal, snacks, water & free photos/video.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Usambara%20Local%20Coffee%20and%20Cultural%20Village%20Tour%20($35)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Usambara%20Local%20Coffee%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
     <!-- 2. Usambara Mountains Hiking and Viewpoint Tour ($35) -->
     <div class="service-card">
-      <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYf0UC6X6-s7b-jqPmI-lRwJwT4hlj6OZumbO6RAlf1ZVxNjIldezQ3ltH6851uIn68vvHC4zgMEJ-9jP05iHh9O4hcfoGOP3GJAqeTBcpAy1TG_PG58fI7Iy0rTaz3nJ2lma5UCDbaDzE" alt="Usambara Mountains Hiking and Viewpoint Tour">
+      <img src="https://lh3.googleusercontent.com/gpu-csl/AM3A8OYf0UC6X6-s7b-jqPmI-lRwJwT4hlj6OZumbO6RAlf1ZVxNjIldezQ3ltH6851uIn68vvHC4zgMEJ-9jP05iHh904hcfoGOP3GJAqeTBcpAy1TG_PG58fI7Iy0rTaz3nJ2lma5UCDbaDzE" alt="Usambara Mountains Hiking and Viewpoint Tour">
       <div class="service-content">
         <h3>Usambara Mountains Hiking and Viewpoint Tour</h3>
         <p class="price">$35 USD per person</p>
         <p class="description">Usambara Mountains Guided Hiking & Irente Viewpoint Excursion where you will get a chance to see beautiful sunset from this breathtaking Viewpoint. Includes entrance fee, guide, meal, snacks, water & free photos/video and free transport to the hotel.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Usambara%20Mountains%20Hiking%20and%20Viewpoint%20Tour%20($35)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Usambara%20Mountains%20Hiking%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -31,7 +139,10 @@
         <h3>Historical Town Tour & Village Walk</h3>
         <p class="price">$35 USD per person</p>
         <p class="description">Guided tour exploring the former German capital city (Wilhelmstal), local markets, cultural interactions, and traditional food. Includes fees, guide, meal, snacks, water & free photos/video.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Historical%20Town%20Tour%20&%20Village%20Walk%20($35)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Historical%20Town%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -42,7 +153,10 @@
         <h3>Town Tour, Village Walk & Traditional Beer Making (Boha)</h3>
         <p class="price">$35 USD per person</p>
         <p class="description">Cultural tour including town walk, village exploration, and hands-on traditional beer making (Boha) with locals.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Town%20Tour%20and%20Traditional%20Beer%20Making%20($35)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Traditional%20Beer%20Making%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -53,7 +167,10 @@
         <h3>Kisasa Waterfall and Village Walk Tour</h3>
         <p class="price">35 USD / 92,113 TZS per person</p>
         <p class="description">Kisasa Waterfalls and exploring Shambaa villages and experiencing how the local people do they live. Includes entrance fees, guide, meal, snacks, water & free photos/video.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Kisasa%20Waterfall%20Tour%20($35)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Kisasa%20Waterfall%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -64,7 +181,10 @@
         <h3>Magamba Nature-Forest Rainforest Trekking & Irente Viewpoint</h3>
         <p class="price">$40 USD per person</p>
         <p class="description">Guided nature walk and wildlife spotting in Magamba Eco-Forest to Irente viewpoint/Yoghoi Viewpoint. Includes park entrance fee, guide, meal, snacks, water & free photos/video.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Magamba%20Nature-Forest%20Trekking%20($40)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Magamba%20Trekking%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -75,7 +195,10 @@
         <h3>Kisasa Waterfalls & Ndekai Viewpoint Combo Tour</h3>
         <p class="price">$40 USD per person</p>
         <p class="description">Scenic day trekking combining Kisasa Waterfalls and Ndekai panoramic viewpoint.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Kisasa%20and%20Ndekai%20Tour%20($40)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Kisasa%20and%20Ndekai%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -86,7 +209,10 @@
         <h3>Mkuzi Nature Forest Reserve & Mkuzi Waterfalls</h3>
         <p class="price">42 USD / 110,535 TZS per person</p>
         <p class="description">Guided hiking tour from Lushoto to Mkuzi Nature Forest and Waterfall. Enjoy forest trails, beautiful mountain scenery, local stories, and refreshing waters. Includes entrance fees, guide, meal, snacks, water & free photos/video.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Mkuzi%20Nature%20Forest%20Tour%20($42)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Mkuzi%20Forest%20Tour&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -97,7 +223,10 @@
         <h3>Mkuzi Zipline, Obstacle Course, Forest & Waterfall Adventure</h3>
         <p class="price">42 USD / 110,428 TZS per person</p>
         <p class="description">Outdoor adventure featuring zip-lining, obstacle challenges, guided rainforest walks, and beautiful waterfalls in Mkuzi.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%20Mkuzi%20Zipline%20Adventure%20($42)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%20Mkuzi%20Zipline%20Adventure&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
@@ -108,9 +237,15 @@
         <h3>3 Days Lushoto to Mtae Trekking Tour</h3>
         <p class="price">180 USD / 473,722 TZS per person</p>
         <p class="description">Embark on an all-inclusive 3-day guided trek through the Usambara Mountains from Lushoto to Mtae. Covers professional guide services, full meals, comfortable local accommodation, and all required park entry fees.</p>
-        <a href="#contact" class="book-btn">Book Now</a>
+        <div class="btn-group">
+          <a href="https://wa.me/255?text=Hello%20Mahanyu,%20I%20want%20to%20book%20the%203%20Days%20Mtae%20Trekking%20Tour%20($180)" target="_blank" class="book-btn whatsapp-btn">Book via WhatsApp</a>
+          <a href="mailto:mahanyu113@gmail.com?subject=Booking:%203%20Days%20Mtae%20Trek&body=Hello%20Mahanyu,%20I%20would%20like%20to%20book%20this%20tour." class="book-btn email-btn">Send Email</a>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
+
+</body>
+</html>
