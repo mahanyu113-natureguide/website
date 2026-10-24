@@ -1,84 +1,61 @@
-/* Styling maalum kwa ajili ya huduma zetu (Services Section) */
 .services-section {
-    padding: 60px 20px;
+    padding: 40px 15px;
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .services-section h2 {
     text-align: center;
-    font-size: 2.2rem;
-    color: var(--ivory, #f5f2e9);
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
-
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
 }
-
 .service-card {
-    background: var(--pine-deep, #0b1b13);
-    border: 1px solid var(--line, rgba(245, 242, 233, 0.2));
-    border-radius: 12px;
+    background: #112217;
+    border: 1px solid #224433;
+    border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, border-color 0.3s ease;
 }
-
-.service-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--gold, #efb044);
-}
-
 .service-card img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
-
 .service-content {
-    padding: 20px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-
 .service-content h3 {
-    font-size: 1.2rem;
-    color: var(--ivory, #f5f2e9);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f39c12;
     margin-bottom: 10px;
 }
-
-.price {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--gold, #efb044);
-    margin-bottom: 12px;
-}
-
 .description {
-    font-size: 0.95rem;
-    color: var(--muted, #b9c0b5);
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 15px;
     flex-grow: 1;
 }
-
 .book-btn {
     display: inline-block;
-    background-color: var(--gold, #efb044);
-    color: var(--pine, #10251b);
+    background-color: #f39c12;
+    color: #000000;
     text-align: center;
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: opacity 0.2s ease;
-}
-
-.book-btn:hover {
-    opacity: 0.9;
 }
