@@ -1,60 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(16, 37, 27, 0.85), rgba(11, 27, 19, 0.90)), 
+                url('https://lh3.googleusercontent.com/gpu-csl/AM3A8OY3De4ADvB26a1yXdRz55RGNgWIAIrc0QBqlA69x24PVvwhoHwgb2JeGEsI2TyX6V1btvilVLMjOkJPa2HicX_JA7kgcaDEYdh89HcahuxVofNBgAbikqCBqF9YmZ3Q_IvDl20jYORxleHY') no-repeat center center fixed !important;
+    background-size: cover !important;
+    color: #f5f2e9 !important;
+    margin: 0;
+    padding: 0;
+}
 .services-section {
-    padding: 40px 15px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 .services-section h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
     margin-bottom: 30px;
 }
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 .service-card {
-    background: #112217;
-    border: 1px solid #224433;
-    border-radius: 10px;
+    background: rgba(11, 27, 19, 0.92);
+    border: 1px solid rgba(245, 242, 233, 0.3);
+    border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 .service-card img {
     width: 100%;
-    height: 180px;
+    height: 200px;
     object-fit: cover;
 }
 .service-content {
-    padding: 15px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 .service-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: #ffffff;
+    font-size: 1.2rem;
+    color: #f5f2e9;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 .price {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #f39c12;
+    color: #efb044;
     margin-bottom: 10px;
 }
 .description {
-    font-size: 0.9rem;
-    color: #cccccc;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #b9c0b5;
+    line-height: 1.5;
+    margin-bottom: 20px;
     flex-grow: 1;
 }
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+}
 .book-btn {
-    display: inline-block;
-    background-color: #f39c12;
-    color: #000000;
+    flex: 1;
+    display: block;
     text-align: center;
-    padding: 8px 12px;
-    border-radius: 5px;
+    padding: 10px 6px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.85rem;
+}
+.whatsapp-btn {
+    background-color: #25D366;
+    color: #ffffff;
+}
+.email-btn {
+    background-color: #efb044;
+    color: #10251b;
+}
+.book-btn:hover {
+    opacity: 0.9;
+}
