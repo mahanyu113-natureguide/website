@@ -1,231 +1,598 @@
-      <section id="tours" class="tours-section">
-  <div class="tours-header">
-    <h2>Our Guided Tours &amp; Experiences</h2>
-    <p>Direct local guiding in Lushoto &amp; Usambara Mountains — Transparent Group Rates &amp; <strong>No Middleman Fees!</strong></p>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahanyu Nature Guide - Authentic Usambara Tours</title>
+  <style>
+    :root {
+      --forest-dark: #0f2016;
+      --forest-main: #1b4332;
+      --forest-light: #2d6a4f;
+      --accent-gold: #d4a373;
+      --accent-orange: #b5651d;
+      --bg-cream: #fbf9f4;
+      --text-main: #2b2b2b;
+    }
 
-  <div class="tours-grid">
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(rgba(15, 32, 22, 0.9), rgba(27, 67, 50, 0.92)), 
+                  url('https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--bg-cream);
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- 1 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 65,000 ($25)</span>
-        <h3>1. Usambara Local Coffee and Cultural Village Tour</h3>
-        <p class="tour-desc">Farm-to-coffee roasting &amp; tasting, village &amp; cultural walk. Includes guide, traditional coffee, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$35</strong> (TZS 92,000)</li>
-            <li>2 Persons: <strong>$31</strong> (TZS 81,000)</li>
-            <li>3–4 Persons: <strong>$28</strong> (TZS 74,000)</li>
-            <li>5+ Persons: <strong>$25</strong> (TZS 65,000)</li>
-          </ul>
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      color: #d8f3dc;
+      margin-bottom: 10px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.6);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #b7e4c7;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-section {
+      max-width: 900px;
+      margin: 20px auto 50px;
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--text-main);
+      border-radius: 16px;
+      padding: 35px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      border-left: 6px solid var(--accent-gold);
+    }
+
+    .about-section h2 {
+      color: var(--forest-main);
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+
+    .about-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    /* TOURS SECTION */
+    .tours-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #d8f3dc;
+      margin-bottom: 40px;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .tours-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+
+    .tour-card {
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: var(--text-main);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .tour-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
+    }
+
+    .tour-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .tour-content {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .tour-badge {
+      display: inline-block;
+      background-color: var(--forest-light);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      align-self: flex-start;
+    }
+
+    .tour-card h3 {
+      color: var(--forest-main);
+      font-size: 1.3rem;
+      margin: 0 0 10px 0;
+      line-height: 1.35;
+    }
+
+    .tour-desc {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .group-rates {
+      background: #f1f8f5;
+      border-left: 4px solid var(--forest-light);
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .group-rates h4 {
+      margin: 0 0 8px 0;
+      font-size: 0.85srem;
+      color: var(--forest-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .group-rates ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+      color: #333;
+    }
+
+    .group-rates ul li {
+      padding: 3px 0;
+      border-bottom: 1px dashed #dce3df;
+    }
+
+    .group-rates ul li:last-child {
+      border-bottom: none;
+      font-weight: 600;
+      color: var(--forest-main);
+    }
+
+    .no-middleman {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--accent-orange);
+      margin-bottom: 15px;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .book-btn {
+      flex: 1;
+      display: block;
+      text-align: center;
+      background-color: #25D366;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 11px 8px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .book-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    .email-btn {
+      flex: 1;
+      display: block;
+      text-align: center;
+      background-color: var(--forest-main);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 11px 8px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .email-btn:hover {
+      background-color: var(--forest-dark);
+    }
+
+    /* FOOTER & SOCIAL MEDIA */
+    footer {
+      background-color: var(--forest-dark);
+      text-align: center;
+      padding: 50px 20px;
+      border-top: 4px solid var(--forest-light);
+    }
+
+    footer h3 {
+      color: #d8f3dc;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .social-btn {
+      background-color: var(--forest-light);
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .social-btn:hover {
+      background-color: var(--accent-gold);
+      color: var(--forest-dark);
+    }
+
+    .copyright {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mahanyu Nature Guide</h1>
+    <p>Authentic Local Guiding in Lushoto &amp; Usambara Mountains — Transparent Group Rates &amp; No Middleman Fees!</p>
+  </header>
+
+  <!-- ABOUT ME SECTION -->
+  <section class="about-section">
+    <h2>About Me (Your Local Tour Guide)</h2>
+    <p>Karibu sana! Mimi ni mwongozaji wako wa karibu kabisa hapa Lushoto. Nimezaliwa na kukulia ndani ya milima hii ya kupendeza ya Usambara, jambo ambalo limenipa fursa ya kipekee ya kufahamu kila kona, njia za vichochoroni, historia tajiri, tamaduni za wenyeji (Wasambaa), pamoja na siri zote za uoto wa asili na wanyamapori wa hapa.</p>
+    <p>Lengo langu ni kukupa uzoefu halisi wa kitanzania (*authentic local experience*) kwa usalama mkubwa, kwa bei nzuri kabisa isiyo na madalali wa kati (*No middleman fees!*), na kukutengenezea kumbukumbu za kudumu kupitia picha na video nzuri za safari yako.</p>
+  </section>
+
+  <!-- TOURS SECTION -->
+  <section class="tours-section">
+    <h2 class="section-title">Our Guided Tours &amp; Experiences</h2>
+
+    <div class="tours-grid">
+
+      <!-- 1. Coffee Tour (Image 1) -->
+      <div class="tour-card">
+        <img src="31288.jpg" alt="Usambara Local Coffee and Cultural Village Tour" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 65,000 ($25)</span>
+            <h3>1. Usambara Local Coffee and Cultural Village Tour</h3>
+            <p class="tour-desc">Farm-to-coffee roasting &amp; tasting, village &amp; cultural walk. Includes guide, traditional coffee, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$35</strong> (TZS 92,000)</li>
+                <li>2 Persons: <strong>$31</strong> (TZS 81,000)</li>
+                <li>3–4 Persons: <strong>$28</strong> (TZS 74,000)</li>
+                <li>5+ Persons: <strong>$25</strong> (TZS 65,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Taste Usambara's heartbeat! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Usambara%20Local%20Coffee%20and%20Cultural%20Village%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Coffee%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Taste Usambara's heartbeat! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Usambara%20Local%20Coffee%20and%20Cultural%20Village%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 2 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 66,000 ($26)</span>
-        <h3>2. Usambara Mountains Hiking and Viewpoint Tour</h3>
-        <p class="tour-desc">Guided hike &amp; Irente Viewpoint sunset excursion. Includes guide, trail snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$36</strong> (TZS 95,000)</li>
-            <li>2 Persons: <strong>$32</strong> (TZS 84,000)</li>
-            <li>3–4 Persons: <strong>$29</strong> (TZS 76,000)</li>
-            <li>5+ Persons: <strong>$26</strong> (TZS 66,000)</li>
-          </ul>
+      <!-- 2. Hiking & Viewpoint (Image 2) -->
+      <div class="tour-card">
+        <img src="60780.jpg" alt="Usambara Mountains Hiking and Viewpoint Tour" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 66,000 ($26)</span>
+            <h3>2. Usambara Mountains Hiking and Viewpoint Tour</h3>
+            <p class="tour-desc">Guided hike &amp; Irente Viewpoint sunset excursion. Includes guide, trail snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$36</strong> (TZS 95,000)</li>
+                <li>2 Persons: <strong>$32</strong> (TZS 84,000)</li>
+                <li>3–4 Persons: <strong>$29</strong> (TZS 76,000)</li>
+                <li>5+ Persons: <strong>$26</strong> (TZS 66,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Catch the golden ridge views! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Usambara%20Mountains%20Hiking%20and%20Viewpoint%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Hiking%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Catch the golden ridge views! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Usambara%20Mountains%20Hiking%20and%20Viewpoint%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 3 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 67,000 ($26)</span>
-        <h3>3. Historical Town Tour &amp; Village Walk</h3>
-        <p class="tour-desc">Explore former German capital (Wilhelmstal), local history &amp; village walk. Includes guide, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$37</strong> (TZS 97,000)</li>
-            <li>2 Persons: <strong>$33</strong> (TZS 87,000)</li>
-            <li>3–4 Persons: <strong>$30</strong> (TZS 79,000)</li>
-            <li>5+ Persons: <strong>$26</strong> (TZS 67,000)</li>
-          </ul>
+      <!-- 3. Historical Town Tour (Image 3) -->
+      <div class="tour-card">
+        <img src="133672.jpg" alt="Historical Town Tour & Village Walk" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 67,000 ($26)</span>
+            <h3>3. Historical Town Tour &amp; Village Walk</h3>
+            <p class="tour-desc">Explore former German capital (Wilhelmstal), local history &amp; village walk. Includes guide, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$37</strong> (TZS 97,000)</li>
+                <li>2 Persons: <strong>$33</strong> (TZS 87,000)</li>
+                <li>3–4 Persons: <strong>$30</strong> (TZS 79,000)</li>
+                <li>5+ Persons: <strong>$26</strong> (TZS 67,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Step back in time! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Historical%20Town%20Tour%20%26%20Village%20Walk." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Historical%20Town%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Step back in time! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Historical%20Town%20Tour%20%26%20Village%20Walk." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 4 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 74,000 ($29)</span>
-        <h3>4. Magamba Nature-Forest Rainforest Trekking</h3>
-        <p class="tour-desc">Magamba rainforest trek &amp; wildlife walk to Irente/Yoghoi. Includes park fee, guide, meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$40</strong> (TZS 105,000)</li>
-            <li>2 Persons: <strong>$36</strong> (TZS 95,000)</li>
-            <li>3–4 Persons: <strong>$32</strong> (TZS 84,000)</li>
-            <li>5+ Persons: <strong>$29</strong> (TZS 74,000)</li>
-          </ul>
+      <!-- 4. Magamba Nature-Forest (Image 4) -->
+      <div class="tour-card">
+        <img src="111323.jpg" alt="Magamba Nature-Forest Rainforest Trekking" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 74,000 ($29)</span>
+            <h3>4. Magamba Nature-Forest Rainforest Trekking</h3>
+            <p class="tour-desc">Magamba rainforest trek &amp; wildlife walk to Irente/Yoghoi. Includes park fee, guide, meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$40</strong> (TZS 105,000)</li>
+                <li>2 Persons: <strong>$36</strong> (TZS 95,000)</li>
+                <li>3–4 Persons: <strong>$32</strong> (TZS 84,000)</li>
+                <li>5+ Persons: <strong>$29</strong> (TZS 74,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Explore ancient woods! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Magamba%20Rainforest%20Trekking." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Magamba%20Trekking" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Explore ancient woods! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Magamba%20Nature-Forest%20Rainforest%20Trekking." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 5 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 75,000 ($29)</span>
-        <h3>5. Kisasa Waterfalls &amp; Ndekai Viewpoint Combo</h3>
-        <p class="tour-desc">Scenic day trek combining Kisasa Waterfalls &amp; Ndekai Viewpoint. Includes guide, meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$41</strong> (TZS 108,000)</li>
-            <li>2 Persons: <strong>$37</strong> (TZS 97,000)</li>
-            <li>3–4 Persons: <strong>$33</strong> (TZS 87,000)</li>
-            <li>5+ Persons: <strong>$29</strong> (TZS 75,000)</li>
-          </ul>
+      <!-- 5. Kisasa Waterfalls & Ndekai Combo (Image 5) -->
+      <div class="tour-card">
+        <img src="27575.jpg" alt="Kisasa Waterfalls & Ndekai Viewpoint Combo" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 75,000 ($29)</span>
+            <h3>5. Kisasa Waterfalls &amp; Ndekai Viewpoint Combo</h3>
+            <p class="tour-desc">Scenic day trek combining Kisasa Waterfalls &amp; Ndekai Viewpoint. Includes guide, meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$41</strong> (TZS 108,000)</li>
+                <li>2 Persons: <strong>$37</strong> (TZS 97,000)</li>
+                <li>3–4 Persons: <strong>$33</strong> (TZS 87,000)</li>
+                <li>5+ Persons: <strong>$29</strong> (TZS 75,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Waterfalls &amp; heights combined! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Kisasa%20Waterfalls%20Combo." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Kisasa%20Waterfalls%20Combo" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Waterfalls &amp; heights combined! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Kisasa%20Waterfalls%20%26%20Ndekai%20Viewpoint%20Combo." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 6 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 77,000 ($30)</span>
-        <h3>6. Town Tour, Village Walk &amp; Traditional Beer Making</h3>
-        <p class="tour-desc">Town walk, village tour &amp; Boha (sugarcane beer) brewing with locals. Includes guide, meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$42</strong> (TZS 110,000)</li>
-            <li>2 Persons: <strong>$38</strong> (TZS 100,000)</li>
-            <li>3–4 Persons: <strong>$34</strong> (TZS 89,000)</li>
-            <li>5+ Persons: <strong>$30</strong> (TZS 77,000)</li>
-          </ul>
+      <!-- 6. Traditional Beer Making (Image 6) -->
+      <div class="tour-card">
+        <img src="111324.jpg" alt="Town Tour, Village Walk & Traditional Beer Making" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 77,000 ($30)</span>
+            <h3>6. Town Tour, Village Walk &amp; Traditional Beer Making</h3>
+            <p class="tour-desc">Town walk, village tour &amp; Boha (sugarcane beer) brewing with locals. Includes guide, meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$42</strong> (TZS 110,000)</li>
+                <li>2 Persons: <strong>$38</strong> (TZS 100,000)</li>
+                <li>3–4 Persons: <strong>$34</strong> (TZS 89,000)</li>
+                <li>5+ Persons: <strong>$30</strong> (TZS 77,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Brew local traditions! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Traditional%20Beer%20Making%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Traditional%20Beer%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Brew local traditions! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Town%20Tour%2C%20Village%20Walk%20%26%20Traditional%20Beer%20Making." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 7 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 79,000 ($31)</span>
-        <h3>7. Kisasa Waterfall and Village Walk Tour</h3>
-        <p class="tour-desc">Chase hidden waterfalls &amp; immerse in authentic Shambaa culture. Includes fees, guide, meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$43</strong> (TZS 113,000)</li>
-            <li>2 Persons: <strong>$39</strong> (TZS 102,000)</li>
-            <li>3–4 Persons: <strong>$35</strong> (TZS 92,000)</li>
-            <li>5+ Persons: <strong>$31</strong> (TZS 79,000)</li>
-          </ul>
+      <!-- 7. Kisasa Waterfall and Village Walk (Image 7) -->
+      <div class="tour-card">
+        <img src="143147.jpg" alt="Kisasa waterfall and Village walk Tour" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 79,000 ($31)</span>
+            <h3>7. Kisasa Waterfall and Village Walk Tour</h3>
+            <p class="tour-desc">Chase hidden waterfalls &amp; immerse in authentic Shambaa culture. Includes fees, guide, meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$43</strong> (TZS 113,000)</li>
+                <li>2 Persons: <strong>$39</strong> (TZS 102,000)</li>
+                <li>3–4 Persons: <strong>$35</strong> (TZS 92,000)</li>
+                <li>5+ Persons: <strong>$31</strong> (TZS 79,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Dive into nature's magic! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Kisasa%20Waterfall%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Kisasa%20Waterfall%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Dive into nature's magic! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Kisasa%20Waterfall%20and%20Village%20Walk%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 8 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 82,000 ($32)</span>
-        <h3>8. Mkuzi Nature Forest Reserve and Mkuzi Waterfalls</h3>
-        <p class="tour-desc">Guided hike to Mkuzi Forest &amp; Waterfalls. Includes entry fees, guide, meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$45</strong> (TZS 118,000)</li>
-            <li>2 Persons: <strong>$41</strong> (TZS 108,000)</li>
-            <li>3–4 Persons: <strong>$36</strong> (TZS 95,000)</li>
-            <li>5+ Persons: <strong>$32</strong> (TZS 82,000)</li>
-          </ul>
+      <!-- 8. Mkuzi Nature Forest Reserve (Image 8) -->
+      <div class="tour-card">
+        <img src="140244.jpg" alt="Mkuzi Nature Forest Reserve and Mkuzi Waterfalls" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 82,000 ($32)</span>
+            <h3>8. Mkuzi Nature Forest Reserve and Mkuzi Waterfalls</h3>
+            <p class="tour-desc">Guided hike to Mkuzi Forest &amp; Waterfalls. Includes entry fees, guide, meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$45</strong> (TZS 118,000)</li>
+                <li>2 Persons: <strong>$41</strong> (TZS 108,000)</li>
+                <li>3–4 Persons: <strong>$36</strong> (TZS 95,000)</li>
+                <li>5+ Persons: <strong>$32</strong> (TZS 82,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Unveil emerald wilderness! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Mkuzi%20Forest%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Mkuzi%20Forest%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Unveil emerald wilderness! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Mkuzi%20Nature%20Forest%20Reserve%20and%20Mkuzi%20Waterfalls%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 9 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 85,000 ($33)</span>
-        <h3>9. Mkuzi Zipline, Obstacle Course, Forest &amp; Waterfall</h3>
-        <p class="tour-desc">Guided forest walk &amp; waterfalls (park fees &amp; guide included). Zipline paid separately. Meal, snacks, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$48</strong> (TZS 126,000)</li>
-            <li>2 Persons: <strong>$44</strong> (TZS 115,000)</li>
-            <li>3–4 Persons: <strong>$39</strong> (TZS 102,000)</li>
-            <li>5+ Persons: <strong>$33</strong> (TZS 85,000)</li>
-          </ul>
+      <!-- 9. Mkuzi Zipline & Obstacle Course (Image 9) -->
+      <div class="tour-card">
+        <img src="18251.jpg" alt="Mkuzi Zipline, Obstacle Course, Forest & Waterfall" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 85,000 ($33)</span>
+            <h3>9. Mkuzi Zipline, Obstacle Course, Forest &amp; Waterfall</h3>
+            <p class="tour-desc">Guided forest walk &amp; waterfalls (park fees &amp; guide included). Zipline paid separately. Meal, snacks, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$48</strong> (TZS 126,000)</li>
+                <li>2 Persons: <strong>$44</strong> (TZS 115,000)</li>
+                <li>3–4 Persons: <strong>$39</strong> (TZS 102,000)</li>
+                <li>5+ Persons: <strong>$33</strong> (TZS 85,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Fuel your adrenaline! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Mkuzi%20Zipline%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%20Mkuzi%20Zipline%20Tour" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Fuel your adrenaline! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%20Mkuzi%20Zipline%2C%20Obstacle%20Course%2C%20Forest%20%26%20Waterfall%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-    <!-- 10 -->
-    <div class="tour-card">
-      <div>
-        <span class="tour-badge">From TZS 320,000 ($122)</span>
-        <h3>10. 3 Days Lushoto to Mtae Trekking Tour</h3>
-        <p class="tour-desc">3-day epic trek from Lushoto to Mtae. Includes guide, full meals, accommodation support, water &amp; photos.</p>
-        <div class="group-rates">
-          <h4>Group Rates / Person</h4>
-          <ul>
-            <li>1 Person: <strong>$180</strong> (TZS 474,000)</li>
-            <li>2 Persons: <strong>$155</strong> (TZS 408,000)</li>
-            <li>3–4 Persons: <strong>$135</strong> (TZS 355,000)</li>
-            <li>5+ Persons: <strong>$122</strong> (TZS 320,000)</li>
-          </ul>
+      <!-- 10. 3 Days Lushoto to Mtae Trekking (Image 10) -->
+      <div class="tour-card">
+        <img src="136012.jpg" alt="3 Days Lushoto to Mtae Trekking Tour" class="tour-img">
+        <div class="tour-content">
+          <div>
+            <span class="tour-badge">From TZS 320,000 ($122)</span>
+            <h3>10. 3 Days Lushoto to Mtae Trekking Tour</h3>
+            <p class="tour-desc">3-day epic trek from Lushoto to Mtae. Includes guide, full meals, accommodation support, water &amp; photos.</p>
+            <div class="group-rates">
+              <h4>Group Rates / Person</h4>
+              <ul>
+                <li>1 Person: <strong>$180</strong> (TZS 474,000)</li>
+                <li>2 Persons: <strong>$155</strong> (TZS 408,000)</li>
+                <li>3–4 Persons: <strong>$135</strong> (TZS 355,000)</li>
+                <li>5+ Persons: <strong>$122</strong> (TZS 320,000)</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p class="no-middleman">✨ Conquer the Usambara ridge! No middleman fees!</p>
+            <div class="btn-group">
+              <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%203%20Days%20Mtae%20Trekking%20Tour." target="_blank" class="book-btn">WhatsApp</a>
+              <a href="mailto:mahanyu113@gmail.com?subject=Booking%203%20Days%20Mtae%20Trek" class="email-btn">Email</a>
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <p class="no-middleman">✨ Conquer the Usambara ridge! No middleman fees!</p>
-        <a href="https://wa.me/255784000483?text=Hello%20Mahanyu!%20I%20would%20like%20to%20book%20the%203%20Days%20Lushoto%20to%20Mtae%20Trekking%20Tour." target="_blank" class="book-btn">Book Direct via WhatsApp</a>
-      </div>
-    </div>
 
-  </div>
-</section>
-      
+    </div>
+  </section>
+
+  <!-- FOOTER & SOCIAL MEDIA -->
+  <footer>
+    <h3>Connect With Mahanyu Nature Guide</h3>
+    <div class="social-links">
+      <a href="https://instagram.com/mahanyunatureguide" target="_blank" class="social-btn">Instagram: @mahanyunatureguide</a>
+      <a href="https://tiktok.com/@mahanyunatureguide" target="_blank" class="social-btn">TikTok: @Mahanyunatureguide</a>
+      <a href="https://facebook.com/Mahanyumahanyu" target="_blank" class="social-btn">Facebook: Mahanyumahanyu</a>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Mahanyu Nature Guide. All Rights Reserved. No Middleman Fees!
+    </div>
+  </footer>
+
+</body>
+</html>
